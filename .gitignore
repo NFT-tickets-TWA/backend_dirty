@@ -37,3 +37,8 @@ lerna-debug.log*
 .env
 src/abi.json
 public/
+/node_modules
+/dist
+npm-debug.log
+.DS_Store
+/*.env

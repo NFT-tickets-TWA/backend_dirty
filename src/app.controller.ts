@@ -9,7 +9,7 @@ import { createInternalEvent } from "./contract";
 export class AppController {
   constructor(private readonly appService: AppService) {}
 
-  @Post()
+  @Post('/create')
   createEvent(@Body() event:Event, @Res() res: Response) {
     createInternalEvent(event, res)
   }
