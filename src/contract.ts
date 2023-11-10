@@ -40,7 +40,10 @@ export const createInternalEvent = async (
       event.countOfTokens,
       process.env.TOKEN_ADDRESS
     );
+
+    console.log("request sent")
     await createReceipt.wait();
+    console.log("response received")
 
     return res.status(200).json({ success: "Transaction successful", hash: createReceipt.hash });
   } catch (e) {
